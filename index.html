@@ -11,23 +11,54 @@
 </head>
 <body>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-1 col-md-1" id='aboutBar'>
+<div class="row">
+    <div id='aboutBar'>
       <div id="aboutText">
        <a href='#about' data-toggle="collapse" data-target="#about">About</a>
       </div>
     </div>
-       <!--The About Page-->
-    <div class="col-sm-1 col-md-1">
-      <div id='about' class="collapse">
-        <div class='titleName' id='aboutTitle' >Hello,</div>
-        <div id='paragraphInfo'></div>
-      </div>
+    <!--The About Page-->
+    <div class="col-sm-12 col-md-12">
+      <section id='about' class="collapse">
+        <table id='aboutSection'>
+        <tr>
+          <td>
+           <div class='titleName' id='aboutTitle' >Hello,</div>
+          </td>
+        </tr>
+          <td>
+           <div id='paragraphInfo'>My name is Lisa Ngo, a recent 
+             graduate of Towson University. I currently work with several
+             languages, including Java, C#, Python and others. I'm always
+             looking to learn more. Contact me!
+           </div>
+          </td>
+        <tr>
+          <td>
+          <div id='experience'>Experience</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <div id="experienceList">
+            <ul>
+              <li>
+                Dealeron / Junior Software Engineer / March 2017 - June 2017
+              </li>
+            </ul>
+          </div>
+          <td>
+        </tr>  
+
+
+        </table>
+      </section>
     </div>
-    <div class="col-sm-10 col-md-10">
+</div>
+<div class='row'>
+    <div class="col-sm-12 col-md-12">     
     <!-- The Home Page -->
-    <div class="col-sm-11 col-md-11">
-      <div id='home'>
+      <section id='home'>
         <div class="center">
         <div class='titleName' id="name">Lisa Ngo</div>
           <div id='software'>SOFTWARE DEVELOPER</div>
@@ -37,9 +68,9 @@
             <a href='http://linkedin.com/in/lisa-ngo-b94858B7'><img class='icon' src='css/images/linkedin.png' width='48' height='48'></a>
           </div>
         </div>
-      </div>
+      </section>
     <!-- The Portfolio Page -->
-      <div id='portfolio'>
+      <section id='portfolio'>
         <div class="col-sm-4">
           <div class='titleName' id='portfolioName'>Projects</div>
         </div>
@@ -52,9 +83,9 @@
         <div class="col-sm-4">
         <!-- Include the carousel here later!-->
         </div>
-      </div>
+      </section>
           <!-- The Contact Page -->
-      <div id='contact'>
+      <section id='contact'>
         <div class="center">
         <div class='titleName'>Contact</div>
         <div class='imagebar'>
@@ -67,12 +98,15 @@
                                <a class='desktopsOnly' href='callto:2406447816'>(240)6447816</a>
         </div>
       </div>
-      </div>
-    </div>
+      </section>
+     </div>
+  </div>
+  <div class="row">
   <footer id="foot">
     <a href="#portfolio" id="driverLink">
     <img src='css/images/arrowDown.png' alt='down-arrow' height='25' width='25' id="downArrow"></a>
   </footer>
+  </div>
   </div>
 </div>
 <!-- JS -->
@@ -91,6 +125,16 @@
       $('footer').show();
     }
   });
+  $('#aboutText').click(function(){
+      var title = $('#aboutText').text();
+      if(title=="About"){
+        $('#aboutText').text("Close");
+        $('#about').toggleClass(true);
+      } else{
+        $('#aboutText').text("About");
+        $('#about').toggleClass(true);
+      }
+  })
 </script>
 </body>
 </html>

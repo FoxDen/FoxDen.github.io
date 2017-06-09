@@ -4,75 +4,44 @@ Baseline
 body{
   font-family:'Fenix';
   color: white;
-  margin: 0 !important;
-  width:100%;
+  margin: 0;
   background-color:#1c2f2f;
   font-size:20px;
 }
 .container-fluid{
-    padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    padding-left:0;
+    padding-right:0;
 }
+html{
+  width:100%;
+  height:100%;
+}
+section{
+  width:auto;
+  height:100vh;
+}
+.row{
+  margin-left:0;
+  margin-right:0;
+}
+.col-sm-12{
+  padding-left:0;
+  padding-right:0;
+}
+/*
+Div pages
+*/
 #aboutBar{
   position:fixed;
   bottom:0;
   left:0;
   z-index: 4;
+  background-color:white;
 }
-.col-sm-1{
-  width:0;
-}
-
-.row{
-
-}
-/*
-Div pages
-*/
-#home{
-  background:url("images/background.png") no-repeat center center fixed;
-  width:100vw;
-  height:100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  text-align: center;
-}
-#contact, #portfolio{
-  background-color:#1c2f2f;
-  text-align: center;
-  width:100vw;
-  height:100vh;
-}
-#portfolioName{
-  text-align: left;
-  letter-spacing: 4px;
-  margin-left:1em;
-}
-#about{
-  background:url('images/aboutme.png') no-repeat center center fixed;
-  font-size:16px;
-  width:0%;
-  height:0;
-}
-footer{
-    position:fixed;
-    bottom:0;
-    left:0;
-    z-index:3;
-    height:2em;
-    width:100%;
-}
-#downArrow{
-  position:fixed;
-  bottom:0;
-  left:45vw;
-}
-
 #aboutText{
   /* Safari */
   -webkit-transform: rotate(-90deg);
@@ -90,6 +59,45 @@ footer{
   top:50vh;
   float:left;
 }
+#about{
+  background:url('images/aboutme.png') no-repeat center center fixed;
+  font-size:16px;
+  z-index:3;
+}
+#home{
+  background:url("images/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+#contact, #portfolio{
+  background-color:#1c2f2f;
+  text-align: center;
+}
+#portfolioName{
+  text-align: left;
+  letter-spacing: 4px;
+  margin-left:.5em;
+}
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index:3;
+    height:2em;
+    width:100%;
+}
+#downArrow{
+  position:fixed;
+  bottom:0;
+  left:49%;
+}
+#paragraphInfo{
+  width:200px;
+  margin-left:100px;
+}
 
 /*
 Responsive Web Design
@@ -101,28 +109,30 @@ Responsive Web Design
     .desktopsOnly{
         display: none;
     }
-    #aboutText{
-      transform:rotate(0deg);
-      top:.5em;
-      left:45vw;
-      z-index:2;
-      font-weight:bold;
-      opacity:1;
-    }
-    #aboutBar{
-      height:2em;
-      background-color:#1c2f2f;
-      width:130%;
-      position:fixed;
-      z-index: 3;
-      opacity: 1;
-    }
+
     .titleName{
       padding-top:10px;
     }
     #portfolioName{
       text-align: center;
       margin-left: 0px;
+    }
+    #aboutBar{
+      height:2em;
+      background-color:#cc6600;
+      width:100%;
+      margin-top:.5em;
+      top:0;
+      position:fixed;
+      z-index: 4;
+      opacity: .5;
+    }
+    #aboutText{
+      transform:rotate(0deg);
+      top:.7em;
+      left:44%;
+      z-index:2;
+      font-weight:bold;
     }
 }
 @media(min-width:768px) {
@@ -139,8 +149,6 @@ Special formatting, prompts, ect
 .titleName{
   font-size: 70px;
   letter-spacing: 4px;
-  position:relative;
-  top:50%;
 }
 
 #software{
@@ -177,5 +185,9 @@ ul{
 .center{
   position:relative;
   top:25%;
+}
+table#aboutSection tr{
+  margin-left:2em;
+  vertical-align:middle;
 }
 
