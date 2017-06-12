@@ -7,8 +7,15 @@
   <title>A Small Space For Coding</title>
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/stylesheet.css" rel="stylesheet">
+  <link href="css/stylesheet.css" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="js/slick-1.6.0/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="js/slick-1.6.0/slick/slick-theme.css"/>
 </head>
+ <!-- Things To Do -->
+ <!-- 
+    -Fix the about page
+    -Add stuff to the projects
+ -->
 <body>
 <div class="container-fluid">
 <div class="row">
@@ -26,13 +33,15 @@
            <div class='titleName' id='aboutTitle' >Hello,</div>
           </td>
         </tr>
+        <tr>
           <td>
            <div id='paragraphInfo'>My name is Lisa Ngo, a recent 
              graduate of Towson University. I currently work with several
-             languages, including Java, C#, Python and others. I'm always
-             looking to learn more. Contact me!
+             languages, including Java, C#, Python and others. This Responsive website was constructed using HTML5, CSS, Javascript/jQuery, and the Bootstrap framework.
+             I'm always looking to learn more. My desire is to contribute to something greater than myself with my skills, and I'm willing to push the limits in order to accomplish this.
            </div>
           </td>
+        </tr>
         <tr>
           <td>
           <div id='experience'>Experience</div>
@@ -45,12 +54,16 @@
               <li>
                 Dealeron / Junior Software Engineer / March 2017 - June 2017
               </li>
+              <li>
+                Panda Programmers / Assistant Teacher / October 2016 - March 2017
+              </li>
+              <li>
+                Baltimore City Public Schools System / Developer Intern / May 2016 - October 2016
+              </li>
             </ul>
           </div>
           <td>
         </tr>  
-
-
         </table>
       </section>
     </div>
@@ -76,12 +89,37 @@
         </div>
         <div class="col-sm-4">
         <ul id='projList'>
-          <li>Project One</li>
-          <li>Project Two</li>
+          <li><a href="">Project One</a></li>
+          <li><a href="">Project Two</a></li>
+          <li><a href="">Project Three</a></li>
+          <li><a href="">Project Four</a></li>
         </ul>
         </div>
         <div class="col-sm-4">
         <!-- Include the carousel here later!-->
+          <div id='projCarousel'>
+            <div class='carousel'> 
+              <img src="css/images/carouselImages/Proj4/gApps1.png" class='carousel-item'>
+              <img src="css/images/carouselImages/Proj4/gApps2.png" class='carousel-item'>
+              <img src="css/images/carouselImages/Proj4/gApps3.png" class='carousel-item'>
+              <img src="css/images/carouselImages/Proj4/gApps4.png" class='carousel-item'>
+            </div>
+          </div>
+          <div id='projInfo'>
+            <p class='1' hidden>
+              Wrote a Bibliography generator.
+            </p>
+            <p class='2' hidden>
+              Wrote a Bibliography generator.
+            </p>
+            <p class='3' hidden>
+              Wrote a Bibliography generator.
+            </p>
+            <div class='4'>
+              <h4>Weaverdice Template Generator</h4>
+              Did something else.
+            </div>
+          </div>
         </div>
       </section>
           <!-- The Contact Page -->
@@ -132,9 +170,14 @@
         $('#about').toggleClass(true);
       } else{
         $('#aboutText').text("About");
-        $('#about').toggleClass(true);
+        $('#about').toggleClass(false);
       }
   })
+     $(document).ready(function(){
+      $('.carousel').slick({
+      });
+    });
+
 </script>
 </body>
 </html>
