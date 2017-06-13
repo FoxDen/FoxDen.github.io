@@ -13,16 +13,14 @@
 </head>
  <!-- Things To Do -->
  <!-- 
-    -Fix the about page
     -Add stuff to the projects
+    -Mobile problems must be fixed. Reevaluate the down-arrow thing.
  -->
 <body>
 <div class="container-fluid">
 <div class="row">
     <div id='aboutBar'>
-      <div id="aboutText">
-       <a href='#about' data-toggle="collapse" data-target="#about">About</a>
-      </div>
+       <a href='#about' id="aboutText">About</a>
     </div>
     <!--The About Page-->
     <div class="col-sm-12 col-md-12">
@@ -40,6 +38,9 @@
              languages, including Java, C#, Python and others. This Responsive website was constructed using HTML5, CSS, Javascript/jQuery, and the Bootstrap framework.
              I'm always looking to learn more. My desire is to contribute to something greater than myself with my skills, and I'm willing to push the limits in order to accomplish this.
            </div>
+           <div id="resume">
+             <a href="css/docs/Lisa Ngo_Resume 2017.docx" download>Resume</a>
+           </div>
           </td>
         </tr>
         <tr>
@@ -47,7 +48,7 @@
           <div id='experience'>Experience</div>
           </td>
         </tr>
-        <tr>
+        <tr >
           <td>
           <div id="experienceList">
             <ul>
@@ -87,18 +88,24 @@
         <div class="col-sm-4">
           <div class='titleName' id='portfolioName'>Projects</div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
         <ul id='projList'>
-          <li><a href="">Project One</a></li>
-          <li><a href="">Project Two</a></li>
-          <li><a href="">Project Three</a></li>
-          <li><a href="">Project Four</a></li>
+          <li><a href="#portfolio" id='projOne'>Project One</a></li>
+          <li><a href="#portfolio" id='projTwo'>Project Two</a></li>
+          <li><a href="#portfolio" id='projThree'>Project Three</a></li>
+          <li><a href="#portfolio" id='projFour'>Project Four</a></li>
         </ul>
         </div>
-        <div class="col-sm-4">
-        <!-- Include the carousel here later!-->
+        <div class="col-sm-5">
+        <!-- Include the carousel here!-->
           <div id='projCarousel'>
-            <div class='carousel'> 
+            <div class='carousel' id='1'>
+            </div>
+            <div class='carousel' id='2'>
+            </div>
+            <div class='carousel' id='3'>
+            </div>
+            <div class='carousel' id='4'> 
               <img src="css/images/carouselImages/Proj4/gApps1.png" class='carousel-item'>
               <img src="css/images/carouselImages/Proj4/gApps2.png" class='carousel-item'>
               <img src="css/images/carouselImages/Proj4/gApps3.png" class='carousel-item'>
@@ -106,18 +113,21 @@
             </div>
           </div>
           <div id='projInfo'>
-            <p class='1' hidden>
-              Wrote a Bibliography generator.
-            </p>
-            <p class='2' hidden>
-              Wrote a Bibliography generator.
-            </p>
-            <p class='3' hidden>
-              Wrote a Bibliography generator.
-            </p>
+            <div class='1' hidden>
+              <h4><a href="https://github.com/FoxDen/SimpleCitations">Bibliography Generator</a></h4>
+              <p>Created a bibliography-generating desktop app for History students trying to use Chicago Citations using <b>Java</b>. Swing was used to make the GUI more attractive in appearance and provide a functional UI.</p>
+            </div>
+            <div class='2' hidden>
+              <h4><a href="">Mars Robot Expedition</a></h4>
+              <p>Developed a moving robot program in <b>C#</b> to further develop my skills in that language.</p>
+            </div>
+            <div class='3' hidden>
+              <h4><a href="https://github.com/FoxDen/Tarot-Cards">Tarot Card Generator</a></h4>
+              <p>Scripted out a random tarot card generator using <b>Python</b> in order to get practice with the language.</p>
+            </div>
             <div class='4'>
-              <h4>Weaverdice Template Generator</h4>
-              Did something else.
+              <h4><a href="https://github.com/FoxDen/Weaverdice-Template-Creator">Weaverdice Template Generator</a></h4>
+              <p>Created a document generator for Google's Web Store using <b>CSS</b>, <b>HTML5</b>, <b>JavaScript</b>, and Google's own scripting language <b>Google Apps Script</b>. This was based on group input, feedback and suggested upgrades.</p>
             </div>
           </div>
         </div>
@@ -156,6 +166,7 @@
     if($(this).scrollTop()>=($('#contact').position().top-50)){
       $('footer').hide();
     } else if($(this).scrollTop()>=($('#portfolio').position().top-50)){
+      
       $("#driverLink").attr("href","#contact");
       $('footer').show();
     } else if($(this).scrollTop()>=($('#home').position().top-50)){
@@ -165,15 +176,39 @@
   });
   $('#aboutText').click(function(){
       var title = $('#aboutText').text();
-      if(title=="About"){
-        $('#aboutText').text("Close");
-        $('#about').toggleClass(true);
-      } else{
+      if(title=="Close"){
         $('#aboutText').text("About");
         $('#about').toggleClass(false);
+      } else{
+        $('#aboutText').text("Close");
+        $('#about').toggleClass(true);
       }
   })
-     $(document).ready(function(){
+  $('#projOne').click(function(){
+      $('#projInfo').children().hide();
+      $('#projCarousel').children().hide();
+      $('.1').show();
+      $('#1').show();
+  });
+    $('#projTwo').click(function(){
+      $('#projInfo').children().hide();
+      $('#projCarousel').children().hide();
+      $('.2').show();
+      $('#2').show();
+  });
+    $('#projThree').click(function(){
+      $('#projInfo').children().hide();
+      $('#projCarousel').children().hide();
+      $('.3').show();
+      $('#3').show();
+  });
+    $('#projFour').click(function(){
+      $('#projInfo').children().hide();
+      $('#projCarousel').children().hide();
+      $('.4').show();
+      $('#4').show();
+  });
+  $(document).ready(function(){
       $('.carousel').slick({
       });
     });

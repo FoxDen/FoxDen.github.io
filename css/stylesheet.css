@@ -86,11 +86,20 @@ Div pages
   text-align:left;
   position:relative;
   font-size:16px;
-    width:100px !important;
-  letter-spacing:2px;
+  letter-spacing:1.5px;
+  margin-right:.5em;
 }
 #projInfo{
   margin-left:0;
+  font-size:12px;
+}
+.carousel{
+margin-right:1em;
+margin-left:1em;
+text-align:left;
+}
+#resume{
+  text-align:center;
 }
 #portfolioName{
   text-align: left;
@@ -114,7 +123,7 @@ footer{
   width:50vw;
 }
 #experience{
-  padding:1em 1em 1em 0;
+  padding:.5em 1px 1px 0;
   font-size: 20px; 
 }
  #experienceList{
@@ -131,7 +140,9 @@ Responsive Web Design
     .desktopsOnly{
         display: none;
     }
-
+    .carousel{
+    font-size:12px;
+    }
     .titleName{
       padding-top:10px;      
       text-align: center;
@@ -158,7 +169,7 @@ Responsive Web Design
     }
     #paragraphInfo{
       font-size:12px;
-      width:!important 100px;
+      width:100px;
     }
     #experience{
       padding:.5em .5em .5em 0;
