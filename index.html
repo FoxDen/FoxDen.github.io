@@ -14,7 +14,8 @@
  <!-- Things To Do -->
  <!-- 
     -Add stuff to the projects
-    -Mobile problems must be fixed. Reevaluate the down-arrow thing.
+    -Change mobile about bar to something nicer.
+    -Add way to fade in from the top?
  -->
 <body>
 <div class="container-fluid">
@@ -43,12 +44,12 @@
            </div>
           </td>
         </tr>
-        <tr>
+        <tr class='desktopsOnly'>
           <td>
           <div id='experience'>Experience</div>
           </td>
         </tr>
-        <tr >
+        <tr class='desktopsOnly'>
           <td>
           <div id="experienceList">
             <ul>
@@ -164,52 +165,59 @@
 <script>
   $(document).on('scroll',function(){
     if($(this).scrollTop()>=($('#contact').position().top-50)){
-      $('footer').hide();
+      $('footer').fadeOut('slow');
     } else if($(this).scrollTop()>=($('#portfolio').position().top-50)){
-      
       $("#driverLink").attr("href","#contact");
-      $('footer').show();
+      $('footer').fadeIn();
     } else if($(this).scrollTop()>=($('#home').position().top-50)){
       $("#driverLink").attr("href","#portfolio");
-      $('footer').show();
+      $('footer').fadeIn('slow');
     }
   });
-  $('#aboutText').click(function(){
-      var title = $('#aboutText').text();
-      if(title=="Close"){
+  $('a[href^="#"]').on('click',function(event){
+    var target = $(this.getAttribute('href'));
+    if(target.length){
+      event.preventDefault();
+      $('html,body').stop().animate({
+        scrollTop:target.offset().top
+      },800);
+    }
+  });
+  $('#aboutText').on('click',function(){
+      if($('#aboutText').text()=="Close"){
         $('#aboutText').text("About");
-        $('#about').toggleClass(false);
       } else{
         $('#aboutText').text("Close");
-        $('#about').toggleClass(true);
       }
+        $('#about').animate({width:'toggle'},800);
   })
   $('#projOne').click(function(){
-      $('#projInfo').children().hide();
-      $('#projCarousel').children().hide();
-      $('.1').show();
-      $('#1').show();
+      $('#projInfo').children().fadeOut();
+      $('#projCarousel').children().fadeOut();
+      $('.1').fadeIn();
+      $('#1').fadeIn();
   });
     $('#projTwo').click(function(){
-      $('#projInfo').children().hide();
-      $('#projCarousel').children().hide();
-      $('.2').show();
-      $('#2').show();
+      $('#projInfo').children().fadeOut();
+      $('#projCarousel').children().fadeOut();
+      $('.2').fadeIn();
+      $('#2').fadeIn();
   });
     $('#projThree').click(function(){
-      $('#projInfo').children().hide();
-      $('#projCarousel').children().hide();
-      $('.3').show();
-      $('#3').show();
+      $('#projInfo').children().fadeOut();
+      $('#projCarousel').children().fadeOut();
+      $('.3').fadeIn();
+      $('#3').fadeIn();
   });
     $('#projFour').click(function(){
-      $('#projInfo').children().hide();
-      $('#projCarousel').children().hide();
-      $('.4').show();
-      $('#4').show();
+      $('#projInfo').children().fadeOut();
+      $('#projCarousel').children().fadeOut();
+      $('.4').fadeIn();
+      $('#4').fadeIn();
   });
   $(document).ready(function(){
       $('.carousel').slick({
+        autoplay : true
       });
     });
 
