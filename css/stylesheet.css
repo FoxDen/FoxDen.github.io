@@ -1,259 +1,304 @@
 /*
 Baseline
 */
-body{
-  font-family:'Fenix';
-  color: white;
-  margin: 0;
-  background-color:#1c2f2f;
-  font-size:20px;
+
+body {
+    font-family: 'Fenix';
+    color: white;
+    margin: 0;
+    background-color: #1c2f2f;
+    font-size: 20px;
+    overflow: hidden;
 }
-.container-fluid{
+
+.container-fluid {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    padding-left:0;
-    padding-right:0;
+    padding-left: 0;
+    padding-right: 0;
 }
-html{
-  width:100%;
-  height:100%;
+
+html {
+    width: 100%;
+    height: 100%;
 }
-section{
-  width:auto;
-  height:100vh;
+
+section {
+    width: auto;
+    height: 100vh;
 }
-.row{
-  margin-left:0;
-  margin-right:0;
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
-.col-sm-12{
-  padding-left:0;
-  padding-right:0;
+
+.col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
 }
+
+
 /*
 Div pages
 */
-#aboutBar{
-  position:fixed;
-  bottom:0;
-  left:0;
-  z-index: 4;
-  background-color:white;
+
+#aboutBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: white;
 }
-#aboutText{
-  /* Safari */
-  -webkit-transform: rotate(-90deg);
-  /* Firefox */
-  -moz-transform: rotate(-90deg);
-  /* IE */
-  -ms-transform: rotate(-90deg);
-  /* Opera */
-  -o-transform: rotate(-90deg);
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  transform: rotate(-90deg);
-  z-index: 5;
-  position:fixed;
-  top:50vh;
-  float:left;
+
+#aboutText {
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform: rotate(-90deg);
+    z-index: 5;
+    position: fixed;
+    top: 50vh;
+    float: left;
 }
-#about{
-  background:url('images/aboutme.png') no-repeat center center fixed;
-  font-size:16px;
-  z-index:3;
-  position:fixed;
-  top:0;
-  width:100vw;
+
+#about {
+    background: url('images/aboutme.png') no-repeat center center fixed;
+    font-size: 16px;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
-#home{
-  background:url("images/background.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  text-align: center;
+
+#home {
+    background: url("images/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
 }
-#contact, #portfolio{
-  background-color:#1c2f2f;
-  text-align: center;
+
+#contact,
+#portfolio {
+    background-color: #1c2f2f;
+    text-align: center;
 }
-#portfolio{
-  padding-top:15vh;
+
+#portfolio {
+    padding-top: 15vh;
 }
-#projList{
-  text-align:left;
-  position:relative;
-  font-size:16px;
-  letter-spacing:1.5px;
-  margin-right:.5em;
+
+#projList {
+    text-align: left;
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-right: .5em;
 }
-#projInfo{
-  margin-left:0;
-  font-size:12px;
+
+#projInfo {
+    margin-left: 0;
+    font-size: 12px;
 }
-.carousel{
-margin-right:1em;
-margin-left:1em;
-text-align:left;
+
+.carousel {
+    margin-right: 1em;
+    margin-left: 1em;
+    text-align: left;
 }
-#resume{
-  font-weight: bold;
-  padding-top:10px;
+
+#resume {
+    font-weight: bold;
+    padding-top: 10px;
 }
-#portfolioName{
-  text-align: left;
-  letter-spacing: 4px;
-  margin-left:.5em;
+
+#portfolioName {
+    text-align: left;
+    letter-spacing: 4px;
+    margin-left: .5em;
 }
-footer{
-    position:fixed;
-    bottom:0;
-    left:0;
-    z-index:3;
-    height:2em;
-    width:100%;
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    height: 2em;
+    width: 100%;
 }
-#downArrow{
-  position:fixed;
-  bottom:0;
-  left:49%;
+
+#downArrow,
+#upArrow {
+    position: fixed;
+    bottom: 0;
+    left: 49%;
 }
-#paragraphInfo, #resume{
-  width:50vw;
-  text-align:center;
+
+#paragraphInfo,
+#resume {
+    width: 50vw;
+    text-align: center;
 }
-#experience{
-  padding:.5em 1px 0 0;
-  font-size: 20px; 
-  width:50vw;
+
+#experience {
+    padding: .5em 1px 0 0;
+    font-size: 20px;
+    width: 50vw;
 }
- #experienceList{
-   font-size:15px;
-   color:lightgrey;
- }
+
+#experienceList {
+    font-size: 15px;
+    color: lightgrey;
+}
+
+
 /*
 Responsive Web Design
 */
-@media(max-width:430px){
-    .mobilesOnly{
-      display: inline;
+
+@media(max-width:430px) {
+    .mobilesOnly {
+        display: inline;
     }
-    .desktopsOnly{
-      display: none;
+    .desktopsOnly {
+        display: none;
     }
-    .carousel{
-      font-size:11px;
+    .carousel {
+        font-size: 11px;
     }
-    .titleName{
-      font-size:50px !important;
-      text-align:center !important;
+    .titleName {
+        font-size: 50px !important;
+        text-align: center !important;
     }
-    #portfolio{
-      padding-top:0px;
+    #portfolio {
+        padding-top: 0px;
     }
-    #aboutBar{
-      height:2em;
-      background-color:#cc6600;
-      width:100%;
-      margin-top:.5em;
-      top:0;
-      position:fixed;
-      z-index: 4;
-      opacity: .5;
+    #aboutBar {
+        height: 2em;
+        background-color: #cc6600;
+        width: 100%;
+        margin-top: .5em;
+        top: 0;
+        position: fixed;
+        z-index: 4;
+        opacity: .5;
     }
-    #aboutTitle{
-      text-align:left !important;
+    #aboutTitle {
+        text-align: left !important;
     }
-    #aboutText{
-      transform:rotate(0deg);
-      top:.7em;
-      left:44%;
-      z-index:5;
-      font-weight:bold;
+    #aboutText {
+        transform: rotate(0deg);
+        top: .7em;
+        left: 44%;
+        z-index: 5;
+        font-weight: bold;
     }
-    #paragraphInfo, #resume{
-      font-size:12px;
-      width:80vw;
+    #paragraphInfo,
+    #resume {
+        font-size: 12px;
+        width: 80vw;
     }
-    #experience{
-      padding:.5em .5em .5em 0;
-      font-size: 15px; 
-      text-align:left;
+    #experience {
+        padding: .5em .5em .5em 0;
+        font-size: 15px;
+        text-align: left;
     }
-    #experienceList{
-      font-size:12px;
-      color:lightgrey;
-      text-align:left;
+    #experienceList {
+        font-size: 12px;
+        color: lightgrey;
+        text-align: left;
     }
-    #aboutSection{
-      top:0;
+    #aboutSection {
+        top: 0;
     }
-    td{
-      text-align: center;
-      width:100%;
+    td {
+        text-align: center;
+        width: 100%;
     }
 }
+
 @media(min-width:768px) {
     .desktopsOnly {
         display: inline;
     }
-    .mobilesOnly{
+    .mobilesOnly {
         display: none;
     }
 }
+
+
 /*
 Special formatting, prompts, ect
 */
-.titleName{
-  font-size: 70px;
-  letter-spacing: 4px;
+
+.titleName {
+    font-size: 70px;
+    letter-spacing: 4px;
 }
 
-#software{
-  font-size:18px;
+#software {
+    font-size: 18px;
 }
 
-#phone, #email{
-  font-size:20px;
-}
-#contact .icon{
-  font-size: 40px;
-  padding: 7px 7px;
+#phone,
+#email {
+    font-size: 20px;
 }
 
-#home .icon{
-  font-size: 28px;
-  padding: 12px 12px;
+#contact .icon {
+    font-size: 40px;
+    padding: 7px 7px;
 }
+
+#home .icon {
+    font-size: 28px;
+    padding: 12px 12px;
+}
+
+
 /* HTML Links */
-a:link{
-  color:white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover{
-  opacity:.5;
-}
-a:visited{
-  color:white;
-  background-color: transparent;
-  text-decoration: underline
-}
-ul{
-  text-decoration: none;
-  list-style-type: none;
-}
-.center{
-  position:relative;
-  top:25%;
-}
-table#aboutSection{
-  position:relative;
-  vertical-align:middle;
-  width:300px;
-  top:20%;
-  margin-left:10vw;
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 
+a:hover {
+    opacity: .5;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.center {
+    position: relative;
+    top: 25%;
+}
+
+table#aboutSection {
+    position: relative;
+    vertical-align: middle;
+    width: 300px;
+    top: 20%;
+    margin-left: 10vw;
+}

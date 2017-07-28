@@ -107,10 +107,10 @@
                                 <img src="css/images/carouselImages/Proj1/gApps4.png" alt="pic coming soon!" class='carousel-item'>
                             </div>
                             <div class='carousel' id='2'>
-                                <img src="css/images/carouselImages/Proj2/gApps1.png" alt="pic coming soon!" class='carousel-item'>
-                                <img src="css/images/carouselImages/Proj2/gApps2.png" alt="pic coming soon!" class='carousel-item'>
-                                <img src="css/images/carouselImages/Proj2/gApps3.png" alt="pic coming soon!" class='carousel-item'>
-                                <img src="css/images/carouselImages/Proj2/gApps4.png" alt="pic coming soon!" class='carousel-item'>
+                                <img src="css/images/carouselImages/Proj2/TestPic1.png" alt="pic coming soon!" class='carousel-item'>
+                                <img src="css/images/carouselImages/Proj2/TestPic2.png" alt="pic coming soon!" class='carousel-item'>
+                                <img src="css/images/carouselImages/Proj2/TestPic3.png" alt="pic coming soon!" class='carousel-item'>
+                                <img src="css/images/carouselImages/Proj2/TestPic4.png" alt="pic coming soon!" class='carousel-item'>
                             </div>
                             <div class='carousel' id='3'>
                                 <img src="css/images/carouselImages/Proj3/tarot1.png" alt="pic coming soon!" class='carousel-item'>
@@ -132,11 +132,11 @@
                             </div>
                             <div class='2' hidden>
                                 <h4><a href="https://github.com/FoxDen/Mars-Rover-Translation-From-Java">Mars Robot Expedition</a></h4>
-                                <p>Developed a moving robot program in <b>C#</b> to further develop my skills in that language.</p>
+                                <p>Developed a moving robot program in <b>C#</b> and <b>Java</b> to further develop my skills in that language. Worked with exception testing and language conversions.</p>
                             </div>
                             <div class='3' hidden>
                                 <h4><a href="https://github.com/FoxDen/Tarot-Cards">Tarot Card Generator</a></h4>
-                                <p>Scripted out a random tarot card generator using <b>Python</b> in order to get practice with the language.</p>
+                                <p>Scripted out a random tarot card generator using <b>Python</b> in order to get practice with the language. Used Random library, web parsing, ect.</p>
                             </div>
                             <div class='4'>
                                 <h4><a href="https://github.com/FoxDen/Weaverdice-Template-Creator">Weaverdice Template Generator</a></h4>
@@ -167,7 +167,11 @@
         <div class="row">
             <footer id="foot">
                 <a href="#portfolio" id="driverLink">
-                    <img src='css/images/arrowDown.png' alt='down-arrow' height='25' width='25' id="downArrow"></a>
+                    <img src='css/images/arrowDown.png' alt='down-arrow' height='25' width='25' id="downArrow">
+                </a>
+                <a href="#home" id="driverLinkUp" hidden>
+                    <img src='css/images/arrowUp.png' alt='up-arrow' height='25' width='25' id='upArrow'>
+                </a>
             </footer>
         </div>
     </div>
@@ -179,13 +183,15 @@
     <script>
         $(document).on('scroll', function() {
             if ($(this).scrollTop() >= ($('#contact').position().top - 50)) {
-                $('footer').fadeOut('slow');
+                $("#driverLink").hide();
+                $("#driverLinkUp").fadeIn();
             } else if ($(this).scrollTop() >= ($('#portfolio').position().top - 50)) {
                 $("#driverLink").attr("href", "#contact");
                 $('footer').fadeIn();
             } else if ($(this).scrollTop() >= ($('#home').position().top - 50)) {
+                $('#driverLinkUp').hide();
+                $('#driverLink').fadeIn();
                 $("#driverLink").attr("href", "#portfolio");
-                $('footer').fadeIn('slow');
             }
         });
         $('a[href^="#"]').on('click', function(event) {
@@ -235,6 +241,8 @@
             $('.carousel').slick({
                 autoplay: true
             });
+            $('#projCarousel').children().fadeOut();
+            $('#4').fadeIn();
         });
     </script>
 </body>
